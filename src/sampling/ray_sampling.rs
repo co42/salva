@@ -6,7 +6,7 @@ use rapier::geometry::Shape;
 use std::collections::HashSet;
 
 /// Samples the surface of `shape` with a method based on ray-casting.
-pub fn shape_surface_ray_sample<S: ?Sized + Shape>(
+pub fn shape_surface_ray_sample<S: ?Sized + Shape + RayCast>(
     shape: &S,
     particle_rad: Real,
 ) -> Option<Vec<Point<Real>>> {
